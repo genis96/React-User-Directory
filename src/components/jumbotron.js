@@ -3,7 +3,7 @@ import "../styles/jumbotron.css"
 
 function Jumbotron() {
     return (
-    <div>
+    <div className="jumbo">
         <div className="jumbotron jumbotron-fluid" id="jumbotronId">
             <div className="container">
                 <h1 className="display-3">Company Directory</h1>

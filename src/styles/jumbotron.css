@@ -1,1 +1,8 @@
-/* .jumbotron {} */
+div .jumbotron {
+    display: flex;
+    background-color: #71D5E4;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
