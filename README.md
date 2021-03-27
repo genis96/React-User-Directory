@@ -16,9 +16,9 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 ## Technologies Used
 
-Javascript 
-React.js
-HTML
-CSS
+Javascript,
+React.js,
+HTML,
+CSS,
 Bootstrap
 
