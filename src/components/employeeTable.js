@@ -38,8 +38,22 @@ class EmployeeTable extends Component {
                 <SearchBar handleInputChange={this.handleInputChange} 
                 search={this.state.search} />
 
-                <div className="table-responsive" />
-    
+                <div className="table-responsive">
+                    <table className="table table-responsive text-center table-striped">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Firt Name <span onClick={this.sortFirstName} className="downArrow"></span></th>
+                                <th>Last Name <span onClick={this.sortLastName} className="downArrow"></span></th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>DOB</th>
+                            </tr>
+                        </thead>
+
+                        
+                    </table>
+                </div>
             </div>
         )
     }
