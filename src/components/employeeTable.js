@@ -7,7 +7,8 @@ import DateFormat from 'dateformat';
 class EmployeeTable extends Component {
     state = {
         search: "",
-        results: []
+        results: [],
+        order: ""
     };
     // When the component mounts, get a list of names and update this.state.results
     componentDidMount() {
@@ -20,7 +21,8 @@ class EmployeeTable extends Component {
     // handleInputChange function - for the input inside the search bar,  function search for target.value
     handleInputChange = e => {
         if(e.target.name === 'search') {
-
+            const searchName = e.target.value.toLowerCase();
+            this.setState({ search: searchName })
         }
     }
 
