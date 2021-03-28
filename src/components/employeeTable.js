@@ -17,11 +17,17 @@ class EmployeeTable extends Component {
         }).catch(err => console.log(err));
     }
 
-    // handleInputChange function - for the input inside the search bar
+    // handleInputChange function - for the input inside the search bar,  function search for target.value
+    handleInputChange = e => {
+        if(e.target.name === 'search') {
 
-    // handleInputChange function search for target.value
+        }
+    }
 
     // handleFormSubmit ,  preventDefault
+    handleFormSubmit = (e) => {
+        e.preventDefault();
+    }
 
     // render items 
 
