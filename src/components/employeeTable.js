@@ -53,9 +53,25 @@ class EmployeeTable extends Component {
     }
 
     // last name 
-    // sortLastName = () => {
-
-    // }
+    sortLastName = () => {
+        const sortEmployees = this.state.results.sort((x, y) => {
+            if(y.name.last > x.name.last) {
+                return -1
+            }
+            if(x.name.last > y.name.last) {
+                return 1
+            }
+            return 0;
+        });
+        if(this.state.order === 'DESC') {
+            // reverses elems in array
+            sortEmployees.reverse();
+            this.setState({ order: 'ASC' });
+        } else {
+            this.setState({ order: 'DESC' });
+        } 
+        this.setState({ results: sortEmployees });
+    }
 
     // render items - create the jsx/html for rendering - name, last name, phone, email, DOB and sort them out 
     render() {
