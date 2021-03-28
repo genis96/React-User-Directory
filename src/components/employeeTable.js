@@ -32,7 +32,17 @@ class EmployeeTable extends Component {
     }
 
     // render items - create the jsx/html for rendering - name, last name, phone, email, DOB and sort them out 
+    render() {
+        return (
+            <div>
+                <SearchBar handleInputChange={this.handleInputChange} 
+                search={this.state.search} />
 
+                <div className="table-responsive" />
+    
+            </div>
+        )
+    }
 
 }
 
