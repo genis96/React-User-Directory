@@ -26,12 +26,12 @@ class EmployeeTable extends Component {
         }
     }
 
-    // handleFormSubmit ,  preventDefault
+    // handleFormSubmit
     handleFormSubmit = (e) => {
         e.preventDefault();
     }
 
-    // render items 
+    // render items - create the jsx/html for rendering - name, last name, phone, email, DOB and sort them out 
 
 
 }
