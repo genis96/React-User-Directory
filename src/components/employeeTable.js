@@ -51,26 +51,33 @@ class EmployeeTable extends Component {
                             </tr>
                         </thead>
 
-                    {/* fn & ln */}
-
-                    {
-                        this.state.results && this.state.results.map(item => {  
-                            item.name.first.toLowerCase().includes(this.state.search) ?
-                            // universally unique identifier
-                            <tbody key={item.login.uuid}>
+                            { this.state.results && this.state.results.map(item =>
+                                item.name.first.toLowerCase().includes(this.state.search) ?
+                                <tbody key={item.login.uuid}>
+                                    <tr>
+                                    <td ><img src={item.picture.thumbnail} className="rounded-circle" alt="thumbnail" /></td>
+                                    <td >{item.name.first}</td>
+                                    <td >{item.name.last}</td>
+                                    <td >{item.phone}</td>
+                                    <td >{item.email}</td>
+                                    <td>{DateFormat(item.dob.date, "theDate")}</td>  
+                                    </tr>
+                                </tbody>
+                            :
+                                item.name.last.toLowerCase().includes(this.state.search) ?
+                                <tbody key={item.login.uuid}>
                                 <tr>
-                                    <td><img alt="thumbnail" src={item.picture.thumbnail} className="rounded-circle"></img></td>
-                                    <td> {item.name.first} </td>
-                                    <td> {item.name.last} </td>
-                                    <td> {item.phone} </td>
-                                    <td> {item.email} </td>
-                                    <td> {DateFormat(item.dob.date, "theDate")} </td>
+                                <td ><img src={item.picture.thumbnail} className="rounded-circle" alt="thumbnail" /></td>
+                                    <td >{item.name.first}</td>
+                                    <td >{item.name.last}</td>
+                                    <td >{item.phone} </td>
+                                    <td >{item.email}</td>
+                                    <td>{DateFormat(item.dob.date, "theDate")}</td>  
                                 </tr>
-                            </tbody>
-                        })
-                    }
-
-
+                                </tbody>
+                            :
+                                null
+                        )}
                     </table>
                 </div>
             </div>
