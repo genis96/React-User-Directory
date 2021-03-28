@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API.js"
-import SearchBar from "../components/searchBar"
 import "../styles/employeeTable.css"
+import SearchBar from "../components/searchBar"
 import DateFormat from 'dateformat';
 
 class EmployeeTable extends Component {
@@ -10,7 +10,7 @@ class EmployeeTable extends Component {
         results: [],
         order: ""
     };
-    
+
     // When the component mounts, get a list of names and update this.state.results
     componentDidMount() {
         API.GetApi()
@@ -84,8 +84,8 @@ class EmployeeTable extends Component {
                         <thead>
                             <tr>
                                 <th>Image</th>
-                                <th>Firt Name <span onClick={this.sortFirstName} className="downArrow"></span></th>
-                                <th>Last Name <span onClick={this.sortLastName} className="downArrow"></span></th>
+                                <th>Firt Name <span onClick={this.sortFirstName} ></span></th>
+                                <th>Last Name <span onClick={this.sortLastName} ></span></th>
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>DOB</th>
@@ -101,7 +101,7 @@ class EmployeeTable extends Component {
                                     <td >{item.name.last}</td>
                                     <td >{item.phone}</td>
                                     <td >{item.email}</td>
-                                    <td>{DateFormat(item.dob.date, "theDate")}</td>  
+                                    <td>{DateFormat(item.dob.date, "mediumDate")}</td>  
                                     </tr>
                                 </tbody>
                             :
@@ -113,7 +113,7 @@ class EmployeeTable extends Component {
                                     <td >{item.name.last}</td>
                                     <td >{item.phone} </td>
                                     <td >{item.email}</td>
-                                    <td>{DateFormat(item.dob.date, "theDate")}</td>  
+                                    <td>{DateFormat(item.dob.date, "mediumDate")}</td>  
                                 </tr>
                                 </tbody>
                             :

@@ -5,8 +5,15 @@
 
 }
 
-.downArrow {
+/* .downArrow {
     cursor: pointer;
+} */
+
+tbody {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 60vh;
 }
 
 thead th span{
