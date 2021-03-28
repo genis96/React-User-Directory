@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../utils/API"
+import API from "../utils/API.js"
 import SearchBar from "../components/searchBar"
 import "../styles/employeeTable.css"
 import DateFormat from 'dateformat';
@@ -10,16 +10,11 @@ class EmployeeTable extends Component {
         results: [],
         order: ""
     };
+    
     // When the component mounts, get a list of names and update this.state.results
-    // componentDidMount() {
-    //     API.searchApiEmployees()
-    //     .then(res => { this.setState({ results: res.data.results }) 
-    //     console.log(this.state.results)
-    //     }).catch(err => console.log(err));
-    // }
     componentDidMount() {
         API.GetApi()
-          .then(res => this.setState({ breeds: res.data.results }))
+          .then(res => this.setState({ results: res.data.results }))
           .catch(err => console.log(err));
       }
 
@@ -30,7 +25,6 @@ class EmployeeTable extends Component {
             this.setState({ search: searchName })
         }
     }
-
     // handleFormSubmit
     handleFormSubmit = (e) => {
         e.preventDefault();
