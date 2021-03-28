@@ -1,0 +1,8 @@
+.form-inline {
+    /* the display-flex inside the console prevents it from taking up the whole space even tho i dont have it in my css */
+    align-items: center;
+    font-size: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 30px;
+}
