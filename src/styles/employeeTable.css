@@ -1,0 +1,9 @@
+.table-responsive {
+    width: 100%;
+    height: 500px;
+}
+
+.downArrow {
+    cursor: pointer;
+    
+}
