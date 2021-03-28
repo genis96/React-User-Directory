@@ -1,10 +1,12 @@
-// import React from "react";
-// import "../styles/employeeTable.css";
+import React from "react"
+import API from "../utils/API"
+import SearchBar from "../components/searchBar"
+import "../styles/employeeTable.css"
 
-// function employeeTable() {
-//     return (
+function EmployeeTable() {
+    return (
 
-//     );
-// }
+    );
+}
 
-// export default employeeTable;
+export default EmployeeTable;
