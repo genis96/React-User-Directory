@@ -5,5 +5,15 @@
 
 .downArrow {
     cursor: pointer;
-    
+}
+
+thead th span{
+    cursor: pointer;
+}
+
+thead, 
+tbody tr {
+    table-layout: fixed;
+    display: table;
+    width: 100%;
 }

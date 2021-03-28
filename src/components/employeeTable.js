@@ -31,6 +31,24 @@ class EmployeeTable extends Component {
         e.preventDefault();
     }
 
+    // first name 
+    sortFirstName = () => {
+        const sortEmployees = this.state.results.sort((x, y) => {
+            if(y.name.first > x.name.first) {
+                return -1
+            }
+            if(x.name.first > y.name.first) {
+                return 1
+            }
+            return 0;
+        });
+    }
+
+    // last name 
+    // sortLastName = () => {
+
+    // }
+
     // render items - create the jsx/html for rendering - name, last name, phone, email, DOB and sort them out 
     render() {
         return (
