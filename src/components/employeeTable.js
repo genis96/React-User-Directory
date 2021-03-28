@@ -42,6 +42,14 @@ class EmployeeTable extends Component {
             }
             return 0;
         });
+        if(this.state.order === 'DESC') {
+            // reverses elems in array
+            sortEmployees.reverse();
+            this.setState({ order: 'ASC' });
+        } else {
+            this.setState({ order: 'DESC' });
+        } 
+        this.setState({ results: sortEmployees });
     }
 
     // last name 
