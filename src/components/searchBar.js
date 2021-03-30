@@ -4,7 +4,7 @@ import "../styles/searchBar.css"
 const SearchBar = (props) => {
     return (
         <form>
-            <div className="form-inline search-widget">
+            <div className="form-inline">
                 <div className="input-group mb-3">
                     <input 
                         className="form-control"
