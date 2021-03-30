@@ -4,14 +4,15 @@ import "../styles/searchBar.css"
 const SearchBar = (props) => {
     return (
         <form>
-            <div className="form-inline">
+            <div className="form-inline search-widget">
                 <div className="input-group mb-3">
                     <input 
                         className="form-control"
-                        type="search"
+                        type="text"
                         placeholder="Search"
-                        id="searchDir"
-                        value={props.handleInputChange}
+                        id="search"
+                        value={props.search}
+                        onChange={props.handleInputChange}
                         name="search"
                     />
                 </div>
